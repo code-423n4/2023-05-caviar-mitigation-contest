@@ -54,7 +54,7 @@ All of the mitigations for each issue are isolated to their own pull requests. W
 | https://github.com/outdoteth/caviar-private-pools/pull/8 | M-06 | Adds the protocol fee to flashLoan fees. |
 | https://github.com/outdoteth/caviar-private-pools/pull/11 | M-08 | This fix ensures that the royaltyAmount is only incremented if the recipient address is not zero. |
 | https://github.com/outdoteth/caviar-private-pools/pull/13 | M-10 | Fix is to add a separate fee called protocolChangeFeeRate which can be much higher than protocolFeeRate. |
-| https://github.com/outdoteth/caviar-private-pools/pull/13 | M-11 | This fix includes the msg.sender in the salt when creating the proxy deployment. |
+| https://github.com/outdoteth/caviar-private-pools/pull/9 | M-11 | This fix includes the msg.sender in the salt when creating the proxy deployment. |
 | https://github.com/outdoteth/caviar-private-pools/pull/14 | M-12 | Adds a check to ensure that users cannot create pools with private pool nfts deposited. |
 | https://github.com/outdoteth/caviar-private-pools/pull/19 | M-17 | Adds a revert if the token does not exist. |
 
@@ -73,11 +73,11 @@ We chose not to fix [M-04](https://github.com/code-423n4/2023-04-caviar-findings
 
 We chose not to fix [M-07](https://github.com/code-423n4/2023-04-caviar-findings/issues/669) because it's already documented in the code that all NFTs are assumed to have the same price for royalty payments. assuming that the recipient is the same for each NFTs royalty payment (which it almost always is in practice) then this makes sense.
 
-NFT 1 is worth 1 ETH
-NFT 2 is worth 2 ETH
+* NFT 1 is worth 1 ETH
+* NFT 2 is worth 2 ETH
 
-(1 + 2) / 2 = 1.5 ETH
-1 / 2 + 2 / 2 = 1.5 ETH
+* (1 + 2) / 2 = 1.5 ETH
+* 1 / 2 + 2 / 2 = 1.5 ETH
 
 the output is the same. the additional complexity of individually calculating each price is not worth it.
 
