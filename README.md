@@ -38,11 +38,10 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 
 ## Overview of changes
 
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern.
+All of the mitigations for each issue are isolated to their own pull requests. While each mitigation may work in isolation, we would also like a review of how the mitigations all work together (i.e. an overview of the whole codebase). Of particular concern is [the mitigation for H-02](https://github.com/outdoteth/caviar-private-pools/pull/2) and whether it makes sense or not.
+
 
 ## Mitigations to be reviewed
-
-Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
@@ -58,8 +57,6 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 | https://github.com/outdoteth/caviar-private-pools/pull/13 | M-11 | This fix includes the msg.sender in the salt when creating the proxy deployment. |
 | https://github.com/outdoteth/caviar-private-pools/pull/14 | M-12 | Adds a check to ensure that users cannot create pools with private pool nfts deposited. |
 | https://github.com/outdoteth/caviar-private-pools/pull/19 | M-17 | Adds a revert if the token does not exist. |
-
-
 
 
 ## Out of Scope
